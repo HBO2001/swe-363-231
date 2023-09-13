@@ -6,11 +6,17 @@
         Hussain's Personal Website
     </Title>
 
-<link rel="stylesheet" href="Styles.css">
+<link rel="stylesheet" href="Styles.css" type="text/css">
+
+
 
 </head>
 
 <body>
+
+    <div class = "container">
+
+    
 
     <meta name = "description" content = "Hussain Alomran's personal blog">
 
@@ -19,15 +25,19 @@
     <meta name = "author" content = "Hussain Alomran">
 
     
-    
     <header>
+
+        <button id="button" onclick="setTheme('theme-light')">Light Mode</button>
+
+        <button id="button" onclick="setTheme('theme-dark')">Dark Mode</button>
 
         <img src = "Images/Header.jpg" width = "2601" height = "500">
 
         <h1>Welcome to Hussain Alomran's personal website.</h1>
 
-        <h2> This websites contains everything related to Hussain's hobbies and personal information. </h2>  
+        <h2> This websites contains everything related to Hussain's hobbies and personal information. </h2>
 
+        
     </header>
 
             <footer>
@@ -50,7 +60,51 @@
 
             </footer>
 
-            
+        </div>
+
+            <script>
+
+                function setTheme(themeName) {
+        
+                    localStorage.setItem('theme', themeName);
+        
+                    document.documentElement.className = themeName;
+        
+                }
+
+                setTheme('theme-light');
+        
+                // function toggleTheme() {
+        
+                // if (localStorage.getItem('theme') === 'theme-dark'){
+        
+                //     setTheme('theme-light');
+        
+                // } else {
+        
+                //     setTheme('theme-dark');
+                // }
+        
+                // }
+        
+                // (function () {
+        
+                // if (localStorage.getItem('theme') === 'theme-dark') {
+        
+                //     setTheme('theme-dark');
+        
+                // } 
+                // else {
+        
+                //     setTheme('theme-light');
+                // }
+        
+                // }
+                // )();
+                
+            </script>
+
+                    
 
 </body>
 
