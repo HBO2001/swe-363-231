@@ -1,42 +1,4 @@
-    /* body{
 
-        background-color: black;
-    
-    }
-    
-    h1,h2,h3,h4,h5 {
-    
-        color: blue;
-    
-        font-family: Lucida Sans;
-    }
-    
-    img{
-    
-        display: block;
-    }
-    
-    a{
-    
-        color: yellow;
-    }
-    
-    a:hover{
-    
-        font-weight: bold;
-    }
-    
-    a:visited{
-    
-        color: green;
-    }
-    
-    footer {
-        
-        color:yellow;
-    
-        font-family: Lucida Sans;
-    } */
 html, body {
     margin: 0;
     padding: 0;
