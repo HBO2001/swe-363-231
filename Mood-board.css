@@ -77,6 +77,11 @@ a{
     color: #d4dcff;
 }
 
+a:hover{
+
+    font-weight: bold;
+
+}
 
 
 form{

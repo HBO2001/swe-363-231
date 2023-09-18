@@ -1,0 +1,28 @@
+html,body{
+
+    text-align: center;
+
+    font-family:'Segoe UI';
+
+    font-size: 16px;
+}
+
+header{
+
+    text-align: left;
+}
+
+footer, a{
+
+    background-color: black;
+    
+    color: white;
+
+    padding: 12px 0px;
+}
+
+a:hover{
+
+    font-weight: bold;
+
+}

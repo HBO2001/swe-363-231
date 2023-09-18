@@ -1,0 +1,33 @@
+html, body{
+
+    
+}
+
+th{
+
+    text-transform: uppercase;
+
+}
+
+a{
+
+    color:green;
+}
+
+.top{
+
+    color: #EB5406;
+}
+
+em{
+
+    color:blue;
+
+}
+
+#the_most_important{
+
+    background: gold;
+
+    text-transform: uppercase;
+}
