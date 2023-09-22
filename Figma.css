@@ -2,17 +2,21 @@ html,body{
 
     text-align: center;
 
-    font-family:'Segoe UI';
+    font-family: ui-serif , serif;
 
     font-size: 16px;
+
+    align-items: center;
 }
 
 header{
 
     text-align: left;
+
+    text-transform: uppercase;
 }
 
-footer, a{
+footer{
 
     background-color: black;
     
@@ -21,9 +25,18 @@ footer, a{
     padding: 12px 0px;
 }
 
+
+footer a{
+
+    color: white;
+}
+
+
 a:hover{
 
     font-weight: bold;
+
+    text-decoration: underline;
 
 }
 
@@ -39,3 +52,11 @@ h1,h2,h3{
 
     font-weight: 700;
 }
+
+h2,h3,h4,h5{
+
+    text-transform: capitalize;
+
+    
+}
+
