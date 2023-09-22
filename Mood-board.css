@@ -142,7 +142,45 @@ button:hover{
 
 }
 
-button:hover::before{
+nav li a {
 
-    width: 100%
+    color: rgba(255,255,255,0);
+
+    transition: color 0.3s;
+}
+
+nav:hover ul li a{
+
+    color:blue;
+}
+
+
+
+nav li:nth-child(2) a{
+
+
+    transition-delay:  0.1s;
+
+}
+
+nav li:nth-child(3) a{
+
+    transition-delay:0.2s;
+
+}
+
+
+nav li:nth-child(4) a{
+
+
+    transition-delay:0.3s;
+
+}
+
+
+nav li:nth-child(5) a{
+
+
+    transition-delay:0.4s;
+
 }
