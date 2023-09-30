@@ -1,0 +1,147 @@
+html,body{
+
+    text-align: center;
+
+    font-family: ui-serif , serif;
+
+    font-size: 16px;
+
+    align-items: center;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    width: 1440px;
+}
+
+header{
+
+    text-transform: uppercase;
+
+    letter-spacing: 2.4px;
+
+    font-weight: 500;
+
+    line-height: 170%;
+}
+
+footer{
+
+    background-color: black;
+    
+    color: white;
+
+    padding: 12px 0px;
+}
+
+
+footer a{
+
+    color: white;
+}
+
+
+a:hover{
+
+    font-weight: bold;
+
+    text-decoration: underline;
+
+}
+
+p{
+
+    font-weight: 500;
+
+    line-height: 120%;
+
+}
+
+h1,h2,h3{
+
+    font-weight: 700;
+}
+
+h2,h3,h4,h5{
+
+    text-transform: capitalize;
+
+    
+}
+
+
+.Header{
+    
+    width: 100%;
+
+    height: 15%;
+}
+
+
+
+@media screen and (min-width: 769px){
+
+h1{
+
+    font-size: 36px;
+}
+
+body{
+
+    align-items: center;
+    
+}
+
+
+
+}
+
+nav li a {
+
+    color: rgba(255,255,255,0);
+
+    transition: color 0.3s;
+    
+}
+
+nav li{
+
+    padding: 8px;
+}
+
+nav:hover ul li a{
+
+    color: black;
+}
+
+
+
+nav li:nth-child(2) a{
+
+
+    transition-delay:  0.1s;
+
+}
+
+nav li:nth-child(3) a{
+
+    transition-delay:0.2s;
+
+}
+
+
+nav li:nth-child(4) a{
+
+
+    transition-delay:0.3s;
+
+}
+
+
+nav li:nth-child(5) a{
+
+
+    transition-delay:0.4s;
+
+}
