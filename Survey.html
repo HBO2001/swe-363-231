@@ -156,13 +156,26 @@
 
                 <textarea class = "textarea" placeholder="Write your feedback about the website here:" rows="30" cols="60" ></textarea>
 
-                <p>
-
-                    <button type = "button" onclick="location.href='Thank You.html'"> Submit </button>
-
-                </p>
+                
 
             </section>
+
+
+            <h2>Please Sign Here:</h2>
+
+            <div class="toolbar">
+                <input type="color" aria-label="select pen color" value="#ff0000">
+                <input type="range" min="2" max="25" value="15" aria-label="select pen size"><span class="output">15</span>
+               
+            </div>
+
+            <canvas class = "Signiture"></canvas>
+
+            <p>
+
+                <button type = "button" onclick="location.href='Thank You.html'"> Submit </button>
+
+            </p>
 
 
         </form>
@@ -170,6 +183,65 @@
         <div class="loader"></div>
 
     </body>
+
+    <script>
+
+const canvas = document.querySelector('.Signiture');
+        const width = canvas.width = window.innerWidth - 300;
+        const height = canvas.height = window.innerHeight - 300;
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'rgb(0,0,0)';
+        ctx.fillRect(0, 0, width, height);
+
+        const colorPicker = document.querySelector('input[type="color"]');
+        const sizePicker = document.querySelector('input[type="range"]');
+        const output = document.querySelector('.output');
+        const clearBtn = document.querySelector('button');
+
+        // covert degrees to radians
+        function degToRad(degrees) {
+            return degrees * Math.PI / 180;
+        };
+
+        // update sizepicker output value
+        sizePicker.addEventListener('input', () => output.textContent = sizePicker.value);
+
+        // store mouse pointer coordinates, and whether the button is pressed
+        let curX;
+        let curY;
+        let pressed = false;
+
+        // update mouse pointer coordinates
+        document.addEventListener('mousemove', e => {
+            curX = e.clientX
+            curY = e.clientY 
+        });
+
+        canvas.addEventListener('mousedown', () => pressed = true);
+        canvas.addEventListener('mouseup', () => pressed = false);
+        clearBtn.addEventListener('click', () => {
+            ctx.fillStyle = 'rgb(0,0,0)';
+            ctx.fillRect(0, 0, width, height);
+        });
+
+        let size = 10
+
+        function draw() {
+            ctx.fillStyle = colorPicker.value;
+            
+            if (pressed){
+                ctx.beginPath();
+                ctx.arc(curX, curY - 85, sizePicker.value, degToRad(0), degToRad(360), false);
+                ctx.fill();
+            }
+
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+
+        </script>
 
 
 </html>
