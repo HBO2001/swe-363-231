@@ -163,12 +163,6 @@
 
             <h2>Please Sign Here:</h2>
 
-            <div class="toolbar">
-                <input type="color" aria-label="select pen color" value="#ff0000">
-                <input type="range" min="2" max="25" value="15" aria-label="select pen size"><span class="output">15</span>
-               
-            </div>
-
             <canvas class = "Signiture"></canvas>
 
             <p>
@@ -187,8 +181,8 @@
     <script>
 
 const canvas = document.querySelector('.Signiture');
-        const width = canvas.width = window.innerWidth - 300;
-        const height = canvas.height = window.innerHeight - 300;
+        const width = canvas.width = 700;
+        const height = canvas.height = 450;
         const ctx = canvas.getContext('2d');
 
         ctx.fillStyle = 'rgb(0,0,0)';
@@ -204,18 +198,15 @@ const canvas = document.querySelector('.Signiture');
             return degrees * Math.PI / 180;
         };
 
-        // update sizepicker output value
-        sizePicker.addEventListener('input', () => output.textContent = sizePicker.value);
-
-        // store mouse pointer coordinates, and whether the button is pressed
+        
         let curX;
         let curY;
         let pressed = false;
 
         // update mouse pointer coordinates
         document.addEventListener('mousemove', e => {
-            curX = e.clientX
-            curY = e.clientY 
+            curX = e.clientX-10
+            curY = e.clientY-340 
         });
 
         canvas.addEventListener('mousedown', () => pressed = true);
@@ -228,11 +219,11 @@ const canvas = document.querySelector('.Signiture');
         let size = 10
 
         function draw() {
-            ctx.fillStyle = colorPicker.value;
+            ctx.fillStyle = 'rgb(255,255,255)';
             
             if (pressed){
                 ctx.beginPath();
-                ctx.arc(curX, curY - 85, sizePicker.value, degToRad(0), degToRad(360), false);
+                ctx.arc(curX, curY - 85, 8, degToRad(0), degToRad(360), false);
                 ctx.fill();
             }
 
