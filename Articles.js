@@ -38,7 +38,7 @@ posts =
   
         date: new Date ("2023-09-15:00:00.000Z"),
 
-        title: "Japanese Culture",
+        title: "Underrated Forms of Entertainment",
 
         brief: "Many people know about all-time comedy classic shows like Friends, Fresh Prince of Bel-air, and Drake & Josh. Other Genres like horror, drama, and romance have their popular shows, but what about the lesser famous genres like thriller, Anime, Stop Motion",
 
