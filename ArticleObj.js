@@ -17,6 +17,7 @@ const Articles = [
     
            
         ]
-    
-    
-document.getElementById("Article").innerHTML = Articles[0].Title + '<br/>' + Articles[0].Brief
+
+        const html = Articles.map(o => Object.values(o).join(' : ')).join('<br/>' + '<br/>');
+
+        document.getElementById("Article").innerHTML = html;
