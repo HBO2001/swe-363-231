@@ -283,3 +283,10 @@ nav li:nth-child(5) a{
 
     
 }
+
+.selected{
+
+    border: 2px solid red;
+
+    color: #e6e6e8;
+}
