@@ -22,12 +22,43 @@
             <button type = "button" onclick="location.href='MainPage.html'"> Return to Main Page </button>
 
         </p>
+
+        <div id = "app">
     
-        <h1>Thank you for submitting your feedback. We hope to see you soon.</h1>
+        <h1>{{Msg}} We hope to see you soon.</h1>
+
+        </div>
 
     </header>
 
     <div class="loader"></div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+
+        const List = ["Thank you for submitting your feedback.", "We appreciate you taking your time to finish this servy.", "All the information will be taken into consideration."];
+
+        const option = Math.floor(Math.random() * List.length)
+
+        console.log(option);
+
+        const TestApp={
+
+            data(){
+
+                return{
+
+                    Msg: List[option],
+                }
+
+                
+            }
+        }
+
+        Vue.createApp(TestApp).mount("#app")
+
+    </script>
 
     </body>
 
