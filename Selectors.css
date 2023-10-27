@@ -1,28 +1,22 @@
 th{
 
     text-transform: uppercase;
-
 }
 
 a{
 
-    color:green;
-}
-
-.top{
-
-    color: #EB5406;
+    color: green;
 }
 
 em{
 
-    color:blue;
+background-color: blue;
 
 }
 
 #the_most_important{
 
-    background: gold;
+    background-color: gold;
 
     text-transform: uppercase;
 }
