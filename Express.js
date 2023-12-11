@@ -6,20 +6,17 @@ app.use(express.static('./'))
 
 const path = require('path')
 
-app.listen(5000, ()=>{
+app.listen(3000, ()=>{
 
     console.log('Server on port 5000')
 })
 
-app.get('/', (req, res)=>{
+// app.get('/', (req, res)=>{
 
-    res.sendFile(path.resolve(__dirname, 'MainPage.html'))
-})
+//     res.sendFile(path.resolve(__dirname, 'MainPage.html'))
+// })
 
-app.get('/about', (req, res)=>{
 
-    res.send('About Page')
-})
 
 app.all('*', (req, res)=>{
 
